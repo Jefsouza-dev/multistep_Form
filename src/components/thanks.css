@@ -30,3 +30,31 @@
 .review-data span {
   font-weight: bold;
 }
+
+.thanks-container h3 {
+  margin-bottom: 28px;
+}
+
+.button {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  border-radius: 3px;
+  background-color: #dfdfdf;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+  color: black;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #bfbfbf;
+}
+
+.send {
+  display: flex;
+  justify-content: space-between;
+}

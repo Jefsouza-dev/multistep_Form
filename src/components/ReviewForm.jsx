@@ -14,10 +14,10 @@ const ReviewForm = ({ data, updateDataHandler }) => {
         <label className="radio-container">
           <input
             type="radio"
-            value="unsatisfied"
+            value="Insatisfeito"
             name="review"
             required
-            checked={data.review === "unsatisfied"}
+            checked={data.review === "Insatisfeito"}
             onChange={(e) => updateDataHandler("review", e.target.value)}
           />
           <BsFillEmojiFrownFill />
@@ -27,10 +27,10 @@ const ReviewForm = ({ data, updateDataHandler }) => {
         <label className="radio-container">
           <input
             type="radio"
-            value="neutral"
+            value="Neutro"
             name="review"
             required
-            checked={data.review === "neutral"}
+            checked={data.review === "Neutro"}
             onChange={(e) => updateDataHandler("review", e.target.value)}
           />
           <BsFillEmojiNeutralFill />
@@ -40,10 +40,10 @@ const ReviewForm = ({ data, updateDataHandler }) => {
         <label className="radio-container">
           <input
             type="radio"
-            value="satisfied"
+            value="Satisfeito"
             name="review"
             required
-            checked={data.review === "satisfied"}
+            checked={data.review === "Satisfeito"}
             onChange={(e) => updateDataHandler("review", e.target.value)}
           />
           <BsFillEmojiSmileFill />
@@ -53,10 +53,10 @@ const ReviewForm = ({ data, updateDataHandler }) => {
         <label className="radio-container">
           <input
             type="radio"
-            value="very_satisfied"
+            value="Muito_satisfeito"
             name="review"
             required
-            checked={data.review === "very_satisfied"}
+            checked={data.review === "Muito_satisfeito"}
             onChange={(e) => updateDataHandler("review", e.target.value)}
           />
           <BsFillEmojiHeartEyesFill />
@@ -71,6 +71,7 @@ const ReviewForm = ({ data, updateDataHandler }) => {
         <textarea
           name="comment"
           id="comment"
+          required
           value={data.comment}
           onChange={(e) => updateDataHandler("comment", e.target.value)}
         ></textarea>

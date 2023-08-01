@@ -1,22 +1,24 @@
 import "./form.css";
+import axios from "axios";
 import { useState } from "react";
-
-import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import { FiSend } from "react-icons/fi";
-
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import FirstForm from "../components/FirstForm";
 import ReviewForm from "../components/ReviewForm";
 import Thanks from "../components/Thanks";
 import Steps from "../components/Steps";
-
 import { useForm } from "../hooks/useForm";
 
 const formData = {
-  nome: "",
+  name: "",
   email: "",
   review: "",
   comment: "",
 };
+
+const api = axios.create({
+  baseURL: "http://localhost:3000",
+});
 
 const Form = () => {
   const [data, setData] = useState(formData);
@@ -28,7 +30,16 @@ const Form = () => {
   };
 
   const send = () => {
-    setData(formData);
+    api
+      .post("/form", {
+        name: data.name,
+        email: data.email,
+        assessment: data.review,
+        comment: data.comment,
+      })
+      .then(() => {
+        alert("Sucesso");
+      });
   };
 
   const formComponents = [
@@ -68,7 +79,7 @@ const Form = () => {
                 <GrFormNext />
               </button>
             ) : (
-              <button type="Button" onClick={send}>
+              <button className="button" onClick={() => send()}>
                 <span>Enviar</span>
                 <FiSend />
               </button>

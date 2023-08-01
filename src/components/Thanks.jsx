@@ -8,13 +8,15 @@ import {
 } from "react-icons/bs";
 
 const emojiData = {
-  unsatisfied: <BsFillEmojiFrownFill />,
-  neutral: <BsFillEmojiNeutralFill />,
-  satisfied: <BsFillEmojiSmileFill />,
-  very_satisfied: <BsFillEmojiHeartEyesFill />,
+  Insatisfeito: <BsFillEmojiFrownFill />,
+  Neutro: <BsFillEmojiNeutralFill />,
+  Satisfeito: <BsFillEmojiSmileFill />,
+  Muito_satisfeito: <BsFillEmojiHeartEyesFill />,
 };
 
 const Thanks = ({ data }) => {
+  const name = data.name.split(" ")[0];
+
   return (
     <div className="thanks-container">
       <h2>Falta pouco...</h2>
@@ -23,12 +25,14 @@ const Thanks = ({ data }) => {
         Para concluir sua avaliação, clique no botão ENVIAR abaixo
       </p>
       <h3>
-        Obrigado por nos avaliar, {data.name}. Aqui está o resumo da avaliação:{" "}
+        Obrigado por nos avaliar, {name}. Aqui está o resumo da avaliação:{" "}
       </h3>
       <p className="review-data">
-        <span>Satisfação com o produto:</span>
-        {emojiData[data.review]}
+        <span>Satisfação com o produto:</span>{" "}
+        {data.review === "Muito_satisfeito" ? "Muito satisfeito" : data.review}{" "}
+        | {emojiData[data.review]}
       </p>
+
       <p className="review-data">
         <span>Comentário: {data.comment}</span>
       </p>
