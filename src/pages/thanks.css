@@ -1,0 +1,27 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+}
+
+.title {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.p {
+  color: black;
+  font-size: 20px;
+}
+
+.link {
+  color: #5d65f3;
+}
+
+.decoration {
+  text-decoration: none;
+}

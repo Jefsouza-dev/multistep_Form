@@ -1,5 +1,4 @@
 import "./form.css";
-import axios from "axios";
 import { useState } from "react";
 import { FiSend } from "react-icons/fi";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
@@ -8,6 +7,7 @@ import ReviewForm from "../components/ReviewForm";
 import Thanks from "../components/Thanks";
 import Steps from "../components/Steps";
 import { useForm } from "../hooks/useForm";
+import { useNavigate } from "react-router-dom";
 
 const formData = {
   name: "",
@@ -16,12 +16,9 @@ const formData = {
   comment: "",
 };
 
-const api = axios.create({
-  baseURL: "http://localhost:3000",
-});
-
 const Form = () => {
   const [data, setData] = useState(formData);
+  const navigate = useNavigate();
 
   const updateDataHandler = (key, value) => {
     setData((prev) => {
@@ -30,16 +27,7 @@ const Form = () => {
   };
 
   const send = () => {
-    api
-      .post("/form", {
-        name: data.name,
-        email: data.email,
-        assessment: data.review,
-        comment: data.comment,
-      })
-      .then(() => {
-        alert("Sucesso");
-      });
+    navigate("/thanks", { replace: true });
   };
 
   const formComponents = [
