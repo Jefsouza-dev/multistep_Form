@@ -4,6 +4,8 @@
 
 This project is a 3-stage product evaluation form that allows users to fill out reviews, with the option to review and modify information in previous stages.
 
+Link to deploy: https://multistepformwreact.netlify.app/
+
 
 
 ## How to run the project.
