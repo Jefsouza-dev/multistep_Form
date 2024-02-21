@@ -1,39 +1,35 @@
-# **Multistep Form**
-This project is a product evaluation form with 3 stages where the user fills out their assessments, with the last stage serving as a confirmation of the previously filled information, allowing the user the option to return to previous stages and modify any data
-
-Link to Deploy: https://multistepformwreact.netlify.app/
+# **Getting Started with Vite**
 
 
 
+## Prerequisites
 
-## **Getting Started with Vite**
+Before you begin, make sure you have Node.js and npm installed on your system. If you haven't already, follow the instructions at [Node.js](https://nodejs.org/) to install.
 
-### Available Scripts
-In the project directory, you can run:
+## Cloning the Project
 
-### npm run dev
-Runs the app in the development mode.
-Open http://localhost:5173 to view it in the browser.
+To start the project, first, clone this repository to your local machine. Open the terminal and execute the following command:
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+```bash
+git clone https://github.com/Jefsouza-dev/TechMall.git
+```
 
+This will create a local copy of the project on your machine.
 
+## Installing Dependencies
+Navigate to the project directory in the terminal and execute the following command to install all necessary dependencies:
 
-## **Technologies used**
+```bash
+npm install
+```
+Isso instalará as bibliotecas e pacotes necessários para o projeto.
 
-* ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-* ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-* ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+## Running the Project
+After the dependencies installation is complete, execute the following command to start the project:
 
-
-
-
-
-
-
-
-
-
+```bash
+npm run dev
+```
 
 
+The project will be available at http://localhost:5173/.
